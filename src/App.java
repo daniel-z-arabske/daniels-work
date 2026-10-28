@@ -1,23 +1,31 @@
 public class App {
-    public class Trojuhlenik{
-        double a = 0;
-        double b = 0;
-        double c = 0;
+    public static class Trojuhlenik{
+        double a;
+        double b;
+        double c;
 
-        private void dopocitejStranuC() {
-            double c = Math.sqrt(a*a + b*b);
+        public Trojuhlenik(double a, double b){
+            this.a = a;
+            this.b = b;
+            this.c = Math.sqrt(a*a + b*b);
         }
 
-        private void obvod() {
-            double obvod = (a + b + c);
+        private double obvod() {
+            return (a + b + c);
         }
 
-        private void obsah() {
-            double obsah = (a*b)/2;
+        private double obsah() {
+            return (a*b)/2;
         }
 
+        public void dopocitejTrojuhlenik() {
+            System.out.printf("Strana C je velká: %.2f jednotek\n", c);
+            System.out.printf("Obvod a obsah jsou %.2f a %.2f jednotek", obvod(), obsah());
+        }
     }
+
     public static void main(String[] args) throws Exception {
-        Trojuhlenik t = new Trujuhelnik();
+        Trojuhlenik t = new Trojuhlenik(3, 4);
+        t.dopocitejTrojuhlenik();
     }
 }
