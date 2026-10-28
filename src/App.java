@@ -20,12 +20,34 @@ public class App {
 
         public void dopocitejTrojuhlenik() {
             System.out.printf("Strana C je velká: %.2f jednotek\n", c);
-            System.out.printf("Obvod a obsah jsou %.2f a %.2f jednotek", obvod(), obsah());
+            System.out.printf("Obvod a obsah jsou %.2f a %.2f jednotek\n", obvod(), obsah());
+        }
+    }
+
+    public static class Ctverec {
+        double a;
+
+        public Ctverec(double a){
+            this.a = a;
+        }
+
+        private double obvod(){
+            return a*4;
+        }
+
+        private double obsah(){
+            return a*a;
+        }
+
+        public void dopocitejCtverec(){
+            System.out.printf("Obvod a obsah ctverce je %.2f a %.2f jednotek\n", obvod(), obsah());
         }
     }
 
     public static void main(String[] args) throws Exception {
         Trojuhlenik t = new Trojuhlenik(3, 4);
         t.dopocitejTrojuhlenik();
+        Ctverec c = new Ctverec(4);
+        c.dopocitejCtverec();
     }
 }
