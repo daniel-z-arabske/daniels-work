@@ -1,3 +1,4 @@
+package ukol.trojuhlenik;
 public class App {
     public static class Trojuhlenik{
         double a;
